@@ -1,0 +1,52 @@
+Description
+
+Problem Description:
+When you try to paste a few records with 2 or more GL accounts the system will freeze and stay in 0 of the number of records you paste
+
+Expected behavior: 
+System should paste the records like the classic behavior
+
+
+
+reproduction steps:
+Reproduction Steps
+
+Make sure you are in EPIC06
+GL Transaction type
+Navigate to Financial Management > General Ledger > Setup > Gl Transaction Type
+1.0 Search in the grid: SingleGLJrn 
+1.1 Open the transaction type
+1.2 Click on Base Std in Revisions card
+1.3 Set Manually Review All Transactions = TRUE
+1.4 Save
+
+Journal Entry
+Navigate to Financial Management > General Ledger > General Operations > Journal entry
+2.0 Click create new group
+2.1 Set Group: Test01
+2.2 Click save
+2.3 Click new journal 
+2.4 Set Description: Test
+2.5 Save
+2.6 Go to Lines/Line Detail tab
+2.7 Click new journal line
+2.8 Under Override checkbox click in the search button
+2.9 Select GL Account 1000-00-00 or any GL account displayed
+3.0 Set Debit: 100
+3.1 Save
+3.2 Go to Details tab
+3.3 Go to Lines tab
+3.4 Right-click on the grid > Copy options > Copy All
+
+OPEN EXCEL
+3.5 Paste the record
+3.6 Duplicate 1000 records with line 1 to 1000 but with the same GL account
+IMAGE ATTACHED N’1
+3.7 Duplicate another 1000 records with line 1001 to 2000 with another GL account example: 1000-00-10
+IMAGE ATTACHED N’2
+3.8 Copy all the records
+
+Journal entry
+3.9 Right click on the grid > Paste New
+BUG… Systems freeze and stays 0-2000, is not pasting any record
+IMAGE ATTACHED N’3

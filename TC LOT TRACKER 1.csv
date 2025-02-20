@@ -1,0 +1,1048 @@
+Execution type ,Name,Status,Priority,Component,Owner,Coverage (Issues),Test Script (Step-by-Step) - Step,Test Script (Step-by-Step) - Test Data,Test Script (Step-by-Step) - Expected Result,Test Script (Plain Text),Test Script (BDD)
+Manual,Lot Tracker - New BO (Landing Page) - Single Part with attribute + Single Lot,Draft,Normal,EA-Lot | IM,6196b814ebce470067ced6eb,ERP-47804,"Dynamic Attribute Class
+Go to Sales Management / Inventory Management / Setup / Dynamic Attribute Class
+Click  New Dynamic Attribute Class
+Class ID and Description = T01
+Calculation type=Basic
+Save
+Click New Dynamic  Attribute Class Detail 
+Set Attribute ID: Color
+Description: Color 
+Label: Color
+Data Type: ComboBox
+Format: x(20)
+Save
+On the Dynamic Attribute Values List Click New Dynamic Attribute  list Value
+Set Code: Blue
+Description: Blue 
+Active: True
+Available: Demand
+Save
+On the Dynamic Attribute Values List Click New Dynamic Attribute  list Value
+Set Code: Green
+Description: Green 
+Active: True
+Available: Demand
+Save
+Click New Dynamic  Attribute Class Detail 
+Set Attribute ID: Size
+Description: Size
+Label: Size
+Data Type: Character
+Format: x(20)
+Save",,,,
+,,,,,,,"Part Maintenance
+Go to Product Management/Material Requirements Planning/Setup/Part
+Create new part
+ID and Desc: P01
+Track Lots: True
+Save
+Go to Attributes tab
+Track Inventory Attributes: true
+Class ID: T01
+Click Save",,,,
+,,,,,,,"Go to Material Management/Inventory Management/General Operations/Quantity Adjustment
+Part: P01
+Press Tab
+Click attributes button
+Click New
+Color: Green
+Size: L
+Click OK
+Enter BIN: 00-00-00
+Quantity: 100
+Click Next Lot
+Lot number: 1
+add any reason
+click adjust
+Message displayed ""Are you sure?""
+Lot Description: T01	
+Batch: test
+MFG Batch: test
+MFG Lot: test
+Heat Number: test
+Firmware: test
+Best Before Date: today
+Original Mfg Date: Today
+Cure Date: Today
+Expire Date: Today",,,,
+,,,,,,,Click OK,,"Part: P01
+Attribute Set: Green, L
+Bin: 00-00-00
+Lot Number: 1
+On Hand: 100",,
+,,,,,,,"Lot Tracker
+Go to Production Managment/Job managements/General Operations/Lot Tracker
+In the landing page 
+Enter Part: P01",,,,
+,,,,,,,Press Tab,,"One Transaction should display 
+Lot Number: 1
+Description: T01
+Part: P01
+Attribute Set: Green, L
+On Hand Qty: 100",,
+,,,,,,,"Clear the landing page
+Click search for Attribute Set
+Attribute Class ID: T01
+Click search
+Select Attribute Set: Green, L",,,,
+,,,,,,,Click Ok,,"Lot Number: 1
+Description: T01
+Part: P01
+Attribute Set: Green, L
+On Hand Qty: 100",,
+Manual,Lot Tracker - New BO (Landing Page) - Single Part with multiple attributes + Single Lot,Draft,Normal,EA-Lot | IM,6196b814ebce470067ced6eb,ERP-47804,"Dynamic Attribute Class
+Go to Sales Management / Inventory Management / Setup / Dynamic Attribute Class
+Click  New Dynamic Attribute Class
+Class ID and Description = T01
+Calculation type=Basic
+Save
+Click New Dynamic  Attribute Class Detail 
+Set Attribute ID: Color
+Description: Color 
+Label: Color
+Data Type: ComboBox
+Format: x(20)
+Save
+On the Dynamic Attribute Values List Click New Dynamic Attribute  list Value
+Set Code: Blue
+Description: Blue 
+Active: True
+Available: Demand
+Save
+On the Dynamic Attribute Values List Click New Dynamic Attribute  list Value
+Set Code: Green
+Description: Green 
+Active: True
+Available: Demand
+Save
+Click New Dynamic  Attribute Class Detail 
+Set Attribute ID: Size
+Description: Size
+Label: Size
+Data Type: Character
+Format: x(20)
+Save",,,,
+,,,,,,,"Part Maintenance
+Go to Product Management/Material Requirements Planning/Setup/Part
+Create new part
+ID and Desc: P01
+Track Lots: True
+Save
+Go to Attributes tab
+Track Inventory Attributes: true
+Class ID: T01
+Click Save",,,,
+,,,,,,,"Go to Material Management/Inventory Management/General Operations/Quantity Adjustment
+Part: P01
+Press Tab
+Click attributes button
+Click New
+Color: Green
+Size: L
+Click OK
+Enter BIN: 00-00-00
+Quantity: 100
+Click Next Lot
+Lot number: 1
+add any reason
+click adjust
+Message displayed ""Are you sure?""
+Lot Description: T01	
+Batch: test
+MFG Batch: test
+MFG Lot: test
+Heat Number: test
+Firmware: test
+Best Before Date: today
+Original Mfg Date: Today
+Cure Date: Today
+Expire Date: Today",,,,
+,,,,,,,Click OK,,"Part: P01
+Attribute Set: Green, L
+Bin: 00-00-00
+Lot Number: 1
+On Hand: 100",,
+,,,,,,,"Part: P01
+Press Tab
+Click attributes button
+Click New
+Color: Blue
+Size: M
+Click OK
+Enter BIN: 00-00-00
+Quantity: 150
+Click Next Lot
+Lot number: 1
+add any reason",,,,
+,,,,,,,Click Adjust,,"Part: P01
+Attribute Set: Blue, M
+Bin: 00-00-00
+Lot Number: 1
+On Hand: 150",,
+,,,,,,,"Part: P01
+Press Tab
+Click attributes button
+Click New
+Color: Green
+Size: S
+Click OK
+Enter BIN: 00-00-00
+Quantity: 200
+Click Next Lot
+Lot number: 1
+add any reason",,,,
+,,,,,,,Click Adjust,,"Part: P01
+Attribute Set: Green, S
+Bin: 00-00-00
+Lot Number: 1
+On Hand: 200",,
+,,,,,,,"Lot Tracker
+Go to Production Managment/Job managements/General Operations/Lot Tracker
+In the landing page 
+Enter Part: P01",,,,
+,,,,,,,Press tab,,"Three Transactions should display. 
+Lot Number: 1
+Description: T01
+Part: P01
+Attribute Set: Green, L
+On Hand Qty: 100
+
+Lot Number: 1
+Description: T01
+Part: P01
+Attribute Set: Blue, M
+On Hand Qty: 150
+
+Lot Number: 1
+Description: T01
+Part: P01
+Attribute Set: Green, S
+On Hand Qty: 200",,
+,,,,,,,"Clear the landing page
+Click search for Attribute Set
+Attribute Class ID: T01
+Click Search
+Select Attribute Set: Green, L",,,,
+,,,,,,,Click OK,,"Lot Number: 1
+Description: T01
+Part: P01
+Attribute Set: Green, L
+On Hand Qty: 100",,
+,,,,,,,"Clear the landing page
+Click search for Attribute Set
+Attribute Class ID: T01
+Click search
+Select Attribute Set: Blue, M",,,,
+,,,,,,,Click Ok,,"Lot Number: 1
+Description: T01
+Part: P01
+Attribute Set: Blue, M
+On Hand Qty: 150",,
+,,,,,,,"Clear the landing page
+Click search for Attribute Set
+Attribute Class ID: T01
+Click search
+Select Attribute Set: Green, S",,,,
+,,,,,,,Click OK,,"Lot Number: 1
+Description: T01
+Part: P01
+Attribute Set: Green, S
+On Hand Qty: 200",,
+Manual,Lot Tracker - New BO (Landing Page) - Multiple Part with single attributes + Single Lot,Draft,Normal,EA-Lot | IM,6196b814ebce470067ced6eb,ERP-47804,"Dynamic Attribute Class
+Go to Sales Management / Inventory Management / Setup / Dynamic Attribute Class
+Click  New Dynamic Attribute Class
+Class ID and Description = T01
+Calculation type=Basic
+Save
+Click New Dynamic  Attribute Class Detail 
+Set Attribute ID: Color
+Description: Color 
+Label: Color
+Data Type: ComboBox
+Format: x(20)
+Save
+On the Dynamic Attribute Values List Click New Dynamic Attribute  list Value
+Set Code: Blue
+Description: Blue 
+Active: True
+Available: Demand
+Save
+On the Dynamic Attribute Values List Click New Dynamic Attribute  list Value
+Set Code: Green
+Description: Green 
+Active: True
+Available: Demand
+Save
+Click New Dynamic  Attribute Class Detail 
+Set Attribute ID: Size
+Description: Size
+Label: Size
+Data Type: Character
+Format: x(20)
+Save",,,,
+,,,,,,,"Part Maintenance
+Go to Product Management/Material Requirements Planning/Setup/Part
+Create new part
+ID and Desc: P01
+Track Lots: True
+Save
+Go to Attributes tab
+Track Inventory Attributes: true
+Class ID: T01
+Click Save
+Create new part
+ID and Desc: P02
+Track Lots: True
+Save
+Go to Attributes tab
+Track Inventory Attributes: true
+Class ID: T01
+Click Save
+Create new part
+ID and Desc: P03
+Track Lots: True
+Save
+Go to Attributes tab
+Track Inventory Attributes: true
+Class ID: T01
+Click Save",,,,
+,,,,,,,"Go to Material Management/Inventory Management/General Operations/Quantity Adjustment
+Part: P01
+Press Tab
+Click attributes button
+Click New
+Color: Green
+Size: L
+Click OK
+Enter BIN: 00-00-00
+Quantity: 100
+Click Next Lot
+Lot number: 1
+add any reason
+click adjust
+Message displayed ""Are you sure?""
+Lot Description: T01	
+Batch: test
+MFG Batch: test
+MFG Lot: test
+Heat Number: test
+Firmware: test
+Best Before Date: today
+Original Mfg Date: Today
+Cure Date: Today
+Expire Date: Today",,,,
+,,,,,,,Click OK,,"Part: P01
+Attribute Set: Green, L
+Bin: 00-00-00
+Lot Number: 1
+On Hand: 100",,
+,,,,,,,"Part: P02
+Press Tab
+Click attributes button
+Click New
+Color: Green
+Size: L
+Click OK
+Enter BIN: 00-00-00
+Quantity: 150
+Click Next Lot
+Lot number: 1
+add any reason
+click adjust
+Message displayed ""Are you sure?""
+Lot Description: T01	
+Batch: test
+MFG Batch: test
+MFG Lot: test
+Heat Number: test
+Firmware: test
+Best Before Date: today
+Original Mfg Date: Today
+Cure Date: Today
+Expire Date: Today",,,,
+,,,,,,,Click Ok,,"Part: P02
+Attribute Set: Green, L
+Bin: 00-00-00
+Lot Number: 1
+On Hand: 150",,
+,,,,,,,"Part: P03
+Press Tab
+Click attributes button
+Click New
+Color: Green
+Size: L
+Click OK
+Enter BIN: 00-00-00
+Quantity: 200
+Click Next Lot
+Lot number: 1
+add any reason
+click adjust
+Message displayed ""Are you sure?""
+Lot Description: T01	
+Batch: test
+MFG Batch: test
+MFG Lot: test
+Heat Number: test
+Firmware: test
+Best Before Date: today
+Original Mfg Date: Today
+Cure Date: Today
+Expire Date: Today",,,,
+,,,,,,,Click Ok,,"Part: P03
+Attribute Set: Green, L
+Bin: 00-00-00
+Lot Number: 1
+On Hand: 200",,
+,,,,,,,"Lot Tracker
+Go to Production Managment/Job managements/General Operations/Lot Tracker
+In the landing page 
+Enter Part: P01",,,,
+,,,,,,,Press tab,,"One Transaction should display 
+Lot Number: 1
+Description: T01
+Part: P01
+Attribute Set: Green, L
+On Hand Qty: 100",,
+,,,,,,,"In the landing page 
+Enter Part: P02",,,,
+,,,,,,,Press tab,,"One Transaction should display 
+Lot Number: 1
+Description: T01
+Part: P02
+Attribute Set: Green, L
+On Hand Qty: 150",,
+,,,,,,,"In the landing page 
+Enter Part: P03",,,,
+,,,,,,,Press tab,,"One Transaction should display 
+Lot Number: 1
+Description: T01
+Part: P03
+Attribute Set: Green, L
+On Hand Qty: 200",,
+,,,,,,,"Clear the landing page
+Click search for Attribute Set
+Attribute Class ID: T01
+Click search
+Select Attribute Set: Green, L",,,,
+,,,,,,,Click Ok,,"Three Transactions should display. 
+Lot Number: 1
+Description: T01
+Part: P01
+Attribute Set: Green, L
+On Hand Qty: 100
+
+Lot Number: 1
+Description: T01
+Part: P02
+Attribute Set: Green, L
+On Hand Qty: 150
+
+Lot Number: 1
+Description: T01
+Part: P03
+Attribute Set: Green, L
+On Hand Qty: 200",,
+Manual,Lot Tracker - New BO (Landing Page) - Multiple Part with multiple attributes + multiple Lot,Draft,Normal,EA-Lot | IM,6196b814ebce470067ced6eb,ERP-47804,"Dynamic Attribute Class
+Go to Sales Management / Inventory Management / Setup / Dynamic Attribute Class
+Click  New Dynamic Attribute Class
+Class ID and Description = T01
+Calculation type=Basic
+Save
+Click New Dynamic  Attribute Class Detail 
+Set Attribute ID: Color
+Description: Color 
+Label: Color
+Data Type: ComboBox
+Format: x(20)
+Save
+On the Dynamic Attribute Values List Click New Dynamic Attribute  list Value
+Set Code: Blue
+Description: Blue 
+Active: True
+Available: Demand
+Save
+On the Dynamic Attribute Values List Click New Dynamic Attribute  list Value
+Set Code: Green
+Description: Green 
+Active: True
+Available: Demand
+Save
+Click New Dynamic  Attribute Class Detail 
+Set Attribute ID: Size
+Description: Size
+Label: Size
+Data Type: Character
+Format: x(20)
+Save",,,,
+,,,,,,,"Part Maintenance
+Go to Product Management/Material Requirements Planning/Setup/Part
+Create new part
+ID and Desc: P01
+Track Lots: True
+Save
+Go to Attributes tab
+Track Inventory Attributes: true
+Class ID: T01
+Click Save
+Create new part
+ID and Desc: P02
+Track Lots: True
+Save
+Go to Attributes tab
+Track Inventory Attributes: true
+Class ID: T01
+Click Save
+Create new part
+ID and Desc: P03
+Track Lots: True
+Save
+Go to Attributes tab
+Track Inventory Attributes: true
+Class ID: T01
+Click Save",,,,
+,,,,,,,"Go to Material Management/Inventory Management/General Operations/Quantity Adjustment
+Part: P01
+Press Tab
+Click attributes button
+Click New
+Color: Green
+Size: L
+Click OK
+Enter BIN: 00-00-00
+Quantity: 100
+Click Next Lot
+Lot number: 1
+add any reason
+click adjust
+Message displayed ""Are you sure?""
+Lot Description: T01	
+Batch: test
+MFG Batch: test
+MFG Lot: test
+Heat Number: test
+Firmware: test
+Best Before Date: today
+Original Mfg Date: Today
+Cure Date: Today
+Expire Date: Today",,,,
+,,,,,,,Click OK,,"Part: P01
+Attribute Set: Green, L
+Bin: 00-00-00
+Lot Number: 1
+On Hand: 100",,
+,,,,,,,"Part: P02
+Press Tab
+Click attributes button
+Click New
+Color: Green
+Size: M
+Click OK
+Enter BIN: 00-00-00
+Quantity: 150
+Click Next Lot
+Lot number: 2
+add any reason
+click adjust
+Message displayed ""Are you sure?""
+Lot Description: T01	
+Batch: test
+MFG Batch: test
+MFG Lot: test
+Heat Number: test
+Firmware: test
+Best Before Date: today
+Original Mfg Date: Today
+Cure Date: Today
+Expire Date: Today",,,,
+,,,,,,,Click OK,,"Part: P02
+Attribute Set: Green, M
+Bin: 00-00-00
+Lot Number: 2
+On Hand: 150",,
+,,,,,,,"Part: P03
+Press Tab
+Click attributes button
+Click New
+Color: Blue
+Size: S
+Click OK
+Enter BIN: 00-00-00
+Quantity: 200
+Click Next Lot
+Lot number: 3
+add any reason
+click adjust
+Message displayed ""Are you sure?""
+Lot Description: T01	
+Batch: test
+MFG Batch: test
+MFG Lot: test
+Heat Number: test
+Firmware: test
+Best Before Date: today
+Original Mfg Date: Today
+Cure Date: Today
+Expire Date: Today",,,,
+,,,,,,,Click Ok,,"Part: P03
+Attribute Set: Blue, S
+Bin: 00-00-00
+Lot Number: 3
+On Hand: 200",,
+,,,,,,,"Lot Tracker
+Go to Production Managment/Job managements/General Operations/Lot Tracker
+In the landing page
+Enter Part: P01",,,,
+,,,,,,,Press Tab,,"One Transaction should display 
+Lot Number: 1
+Description: T01
+Part: P01
+Attribute Set: Green, L
+On Hand Qty: 100",,
+,,,,,,,"In the landing page
+Enter Part: P02",,,,
+,,,,,,,Press Tab,,"One Transaction should display 
+Lot Number: 2
+Description: T01
+Part: P02
+Attribute Set: Green, M
+On Hand Qty: 150",,
+,,,,,,,"In the landing page
+Enter Part: P03",,,,
+,,,,,,,Press Tab,,"One Transaction should display 
+Lot Number: 3
+Description: T01
+Part: P03
+Attribute Set: Blue, S
+On Hand Qty: 200",,
+,,,,,,,"Clear the landing page
+Click search for Attribute Set
+Attribute Class ID: T01
+Click search
+Select Attribute Set: Green, L",,,,
+,,,,,,,Click Ok,,"One Transaction should display 
+Lot Number: 1
+Description: T01
+Part: P01
+Attribute Set: Green, L
+On Hand Qty: 100",,
+,,,,,,,"Clear the landing page
+Click search for Attribute Set
+Attribute Class ID: T01
+Click search
+Select Attribute Set: Green, M",,,,
+,,,,,,,Click Ok,,"One Transaction should display 
+Lot Number: 2
+Description: T01
+Part: P02
+Attribute Set: Green, M
+On Hand Qty: 150",,
+,,,,,,,"Clear the landing page
+Click search for Attribute Set
+Attribute Class ID: T01
+Click search
+Select Attribute Set: Blue, S",,,,
+,,,,,,,Click Ok,,"One Transaction should display 
+Lot Number: 3
+Description: T01
+Part: P03
+Attribute Set: Blue, S
+On Hand Qty: 200",,
+Manual,Lot Tracker - New BO (Landing Page) - Multiple Part with Single attributes + Multiple Lot,Draft,Normal,EA-Lot | IM,6196b814ebce470067ced6eb,ERP-47804,"Dynamic Attribute Class
+Go to Sales Management / Inventory Management / Setup / Dynamic Attribute Class
+Click  New Dynamic Attribute Class
+Class ID and Description = T01
+Calculation type=Basic
+Save
+Click New Dynamic  Attribute Class Detail 
+Set Attribute ID: Color
+Description: Color 
+Label: Color
+Data Type: ComboBox
+Format: x(20)
+Save
+On the Dynamic Attribute Values List Click New Dynamic Attribute  list Value
+Set Code: Blue
+Description: Blue 
+Active: True
+Available: Demand
+Save
+On the Dynamic Attribute Values List Click New Dynamic Attribute  list Value
+Set Code: Green
+Description: Green 
+Active: True
+Available: Demand
+Save
+Click New Dynamic  Attribute Class Detail 
+Set Attribute ID: Size
+Description: Size
+Label: Size",,,,
+,,,,,,,"Part Maintenance
+Go to Product Management/Material Requirements Planning/Setup/Part
+Create new part
+ID and Desc: P01
+Track Lots: True
+Save
+Go to Attributes tab
+Track Inventory Attributes: true
+Class ID: T01
+Click Save
+Create new part
+ID and Desc: P02
+Track Lots: True
+Save
+Go to Attributes tab
+Track Inventory Attributes: true
+Class ID: T01
+Click Save
+Create new part
+ID and Desc: P03
+Track Lots: True
+Save
+Go to Attributes tab
+Track Inventory Attributes: true
+Class ID: T01
+Click Save",,,,
+,,,,,,,"Go to Material Management/Inventory Management/General Operations/Quantity Adjustment
+Part: P01
+Press Tab
+Click attributes button
+Click New
+Color: Green
+Size: L
+Click OK
+Enter BIN: 00-00-00
+Quantity: 100
+Click Next Lot
+Lot number: 1
+add any reason
+click adjust
+Message displayed ""Are you sure?""
+Lot Description: T01	
+Batch: test
+MFG Batch: test
+MFG Lot: test
+Heat Number: test
+Firmware: test
+Best Before Date: today
+Original Mfg Date: Today
+Cure Date: Today
+Expire Date: Today",,,,
+,,,,,,,Click OK,,"Part: P01
+Attribute Set: Green, L
+Bin: 00-00-00
+Lot Number: 1
+On Hand: 100",,
+,,,,,,,"Part: P02
+Press Tab
+Click attributes button
+Click New
+Color: Green
+Size: L
+Click OK
+Enter BIN: 00-00-00
+Quantity: 150
+Click Next Lot
+Lot number: 2
+add any reason
+click adjust
+Message displayed ""Are you sure?""
+Lot Description: T01	
+Batch: test
+MFG Batch: test
+MFG Lot: test
+Heat Number: test
+Firmware: test
+Best Before Date: today
+Original Mfg Date: Today
+Cure Date: Today
+Expire Date: Today",,,,
+,,,,,,,Click Ok,,"Part: P02
+Attribute Set: Green, L
+Bin: 00-00-00
+Lot Number: 2
+On Hand: 150",,
+,,,,,,,"Part: P03
+Press Tab
+Click attributes button
+Click New
+Color: Green
+Size: L
+Click OK
+Enter BIN: 00-00-00
+Quantity: 200
+Click Next Lot
+Lot number: 3
+add any reason
+click adjust
+Message displayed ""Are you sure?""
+Lot Description: T01	
+Batch: test
+MFG Batch: test
+MFG Lot: test
+Heat Number: test
+Firmware: test
+Best Before Date: today
+Original Mfg Date: Today
+Cure Date: Today
+Expire Date: Today",,,,
+,,,,,,,Click Ok,,"Part: P03
+Attribute Set: Green, L
+Bin: 00-00-00
+Lot Number: 3
+On Hand: 200",,
+,,,,,,,"Lot Tracker
+Go to Production Managment/Job managements/General Operations/Lot Tracker
+In the landing page
+Enter Part: P01",,,,
+,,,,,,,Press Tab,,"One Transaction should display 
+Lot Number: 1
+Description: T01
+Part: P01
+Attribute Set: Green, L
+On Hand Qty: 100",,
+,,,,,,,"In the landing page
+Enter Part: P02",,,,
+,,,,,,,Press Tab,,"One Transaction should display 
+Lot Number: 2
+Description: T01
+Part: P02
+Attribute Set: Green, L
+On Hand Qty: 150",,
+,,,,,,,"In the landing page
+Enter Part: P03",,,,
+,,,,,,,Press Tab,,"One Transaction should display 
+Lot Number: 3
+Description: T01
+Part: P03
+Attribute Set: Green, L
+On Hand Qty: 200",,
+,,,,,,,"Clear the landing page
+Click search for Attribute Set
+Attribute Class ID: T01
+Click search
+Select Attribute Set: Green, L",,,,
+,,,,,,,Click OK,,"Three Transactions should display. 
+Lot Number: 1
+Description: T01
+Part: P01
+Attribute Set: Green, L
+On Hand Qty: 100
+
+Lot Number: 2
+Description: T01
+Part: P02
+Attribute Set: Green, L
+On Hand Qty: 150
+
+Lot Number: 3
+Description: T01
+Part: P03
+Attribute Set: Green, L
+On Hand Qty: 200",,
+Manual,Lot Tracker - New BO (Landing Page) - Multiple Part with Multiple attributes + Single Lot,Draft,Normal,EA-Lot | IM,6196b814ebce470067ced6eb,ERP-47804,"Dynamic Attribute Class
+Go to Sales Management / Inventory Management / Setup / Dynamic Attribute Class
+Click  New Dynamic Attribute Class
+Class ID and Description = T01
+Calculation type=Basic
+Save
+Click New Dynamic  Attribute Class Detail 
+Set Attribute ID: Color
+Description: Color 
+Label: Color
+Data Type: ComboBox
+Format: x(20)
+Save
+On the Dynamic Attribute Values List Click New Dynamic Attribute  list Value
+Set Code: Blue
+Description: Blue 
+Active: True
+Available: Demand
+Save
+On the Dynamic Attribute Values List Click New Dynamic Attribute  list Value
+Set Code: Green
+Description: Green 
+Active: True
+Available: Demand
+Save
+Click New Dynamic  Attribute Class Detail 
+Set Attribute ID: Size
+Description: Size
+Label: Size
+Data Type: Character
+Format: x(20)
+Save",,,,
+,,,,,,,"Part Maintenance
+Go to Product Management/Material Requirements Planning/Setup/Part
+Create new part
+ID and Desc: P01
+Track Lots: True
+Save
+Go to Attributes tab
+Track Inventory Attributes: true
+Class ID: T01
+Click Save
+Create new part
+ID and Desc: P02
+Track Lots: True
+Save
+Go to Attributes tab
+Track Inventory Attributes: true
+Class ID: T01
+Click Save
+Create new part
+ID and Desc: P03
+Track Lots: True
+Save
+Go to Attributes tab
+Track Inventory Attributes: true
+Class ID: T01
+Click Save",,,,
+,,,,,,,"Go to Material Management/Inventory Management/General Operations/Quantity Adjustment
+Part: P01
+Press Tab
+Click attributes button
+Click New
+Color: Green
+Size: L
+Click OK
+Enter BIN: 00-00-00
+Quantity: 100
+Click Next Lot
+Lot number: 1
+add any reason
+click adjust
+Message displayed ""Are you sure?""
+Lot Description: T01	
+Batch: test
+MFG Batch: test
+MFG Lot: test
+Heat Number: test
+Firmware: test
+Best Before Date: today
+Original Mfg Date: Today
+Cure Date: Today
+Expire Date: Today",,,,
+,,,,,,,Click Ok,,"Part: P01
+Attribute Set: Green, L
+Bin: 00-00-00
+Lot Number: 1
+On Hand: 100",,
+,,,,,,,"Part: P02
+Press Tab
+Click attributes button
+Click New
+Color: Green
+Size: M
+Click OK
+Enter BIN: 00-00-00
+Quantity: 150
+Click Next Lot
+Lot number: 1
+add any reason
+click adjust
+Message displayed ""Are you sure?""
+Lot Description: T01	
+Batch: test
+MFG Batch: test
+MFG Lot: test
+Heat Number: test
+Firmware: test
+Best Before Date: today
+Original Mfg Date: Today
+Cure Date: Today
+Expire Date: Today",,,,
+,,,,,,,Click Ok,,"Part: P02
+Attribute Set: Green, M
+Bin: 00-00-00
+Lot Number: 1
+On Hand: 150",,
+,,,,,,,"Part: P03
+Press Tab
+Click attributes button
+Click New
+Color: Blue
+Size: S
+Click OK
+Enter BIN: 00-00-00
+Quantity: 200
+Click Next Lot
+Lot number: 1
+add any reason
+click adjust
+Message displayed ""Are you sure?""
+Lot Description: T01	
+Batch: test
+MFG Batch: test
+MFG Lot: test
+Heat Number: test
+Firmware: test
+Best Before Date: today
+Original Mfg Date: Today
+Cure Date: Today
+Expire Date: Today",,,,
+,,,,,,,Click Ok,,"Part: P03
+Attribute Set: Blue, S
+Bin: 00-00-00
+Lot Number: 1
+On Hand: 200",,
+,,,,,,,"Lot Tracker
+Go to Production Managment/Job managements/General Operations/Lot Tracker
+In the landing page
+Enter Part: P01",,,,
+,,,,,,,Press Tab,,"One Transaction should display 
+Lot Number: 1
+Description: T01
+Part: P01
+Attribute Set: Green, L
+On Hand Qty: 100",,
+,,,,,,,"In the landing page
+Enter Part: P02",,,,
+,,,,,,,Press Tab,,"One Transaction should display 
+Lot Number: 1
+Description: T01
+Part: P02
+Attribute Set: Green, M
+On Hand Qty: 150",,
+,,,,,,,"In the landing page
+Enter Part: P03",,,,
+,,,,,,,Click OK,,"One Transaction should display 
+Lot Number: 1
+Description: T01
+Part: P03
+Attribute Set: Blue, S
+On Hand Qty: 200",,
+,,,,,,,"Clear the landing page
+Click search for Attribute Set
+Attribute Class ID: T01
+Click search
+Select Attribute Set: Green, L",,,,
+,,,,,,,Press Tab,,"One Transaction should display 
+Lot Number: 1
+Description: T01
+Part: P01
+Attribute Set: Green, L
+On Hand Qty: 100",,
+,,,,,,,"Clear the landing page
+Click search for Attribute Set
+Attribute Class ID: T01
+Click search
+Select Attribute Set: Green, M",,,,
+,,,,,,,Press Tab,,"One Transaction should display 
+Lot Number: 1
+Description: T01
+Part: P02
+Attribute Set: Green, M
+On Hand Qty: 150",,
+,,,,,,,"Clear the landing page
+Click search for Attribute Set
+Attribute Class ID: T01
+Click search
+Select Attribute Set: Blue, S",,,,
+,,,,,,,Press Tab,,"One Transaction should display 
+Lot Number: 1
+Description: T01
+Part: P03
+Attribute Set: Blue, S
+On Hand Qty: 200",,

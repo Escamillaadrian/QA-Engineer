@@ -1,0 +1,27 @@
+Adrian Escamilla
+Date: 02/12/2025
+Server: Confidential
+Weblink: confindential
+Version: 11.2.400
+Build: 02/12/2025
+
+Test Results: 
+Changes were made successfully.
+Now in job entry screen in Assemblies tab when the user creates a new Subassemblies and adds any existing part, the system will automatically add the Assembly Description according to the part information, but, If the user adds any part on the fly, the Assembly Descriptions field needs to be filled with any information, if this field is not filled with information, an error will display saying that the description cannot be blank.
+The field of Assembly Description can be changed in the grid or by selecting the "Asm Seq" where the full page will be displayed and the user will be able to see the same field called Assembly Description below the Assembly part and the user can change the description there too.
+Also did the test adding subassemblies to the parent assembly and no error is displaying.
+Reviewed if the name of the column is the correct in the personalize column section
+ID: Description (correct)
+EpBinding: JobAsmbl.Description (correct)
+Also I reviewed the ID and EpBinding with Field Help and everything is correct.
+
+Additional Test
+1. Created multiple Subassemblies.
+2. Reviewed the information if the user changes the description in the grid the same description should be in the field of the full page.
+3. Tested with part on the fly where the user need to add the description.
+4. Tested with existing parts where the system need to retrieve the actual description of that part.
+5. Adding subassemblies to the parent assembly and no error is displaying.
+6. Reviewed if the name of the column is the correct in the personalize column section
+ID: Description (correct)
+EpBinding: JobAsmbl.Description (correct)
+7. Reviewed the ID and EpBinding with Field Help and everything is correct.
